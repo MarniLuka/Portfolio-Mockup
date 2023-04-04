@@ -1,15 +1,19 @@
+:root {
+    --blue: rgb(61, 207, 207);
+    --gray: rgb(87, 87, 87);
+}
+
 * {
     font-family: "Helvetica", "Arial", sans-serif;
 }
 
 /* Navbar */
 header {
-    background-color: black;
-    opacity: 0.8;
+    background-color: rgba(0, 0, 0, 0.815);
 }
 
 header h1 {
-    background-color: darkcyan;
+    background-color: var(--blue);
     display: inline-block;
     padding-left: 60px;
     font-size: 50px;
@@ -24,7 +28,7 @@ header ul {
 }
 
 header li a {
-    color: darkcyan;
+    color: var(--blue);
     font-size: 20px;
     padding: 5px;
     display: inline-block;
@@ -36,9 +40,9 @@ header li a {
 }
 
 /* Background image */
-
 figure {
     position: relative;
+    margin: 0;
 }
 
 .figure-image {
@@ -53,18 +57,22 @@ figure {
     position: absolute;
     bottom: 10px;
     right: 240px;
-    background-color: rgb(61, 207, 207);
+    background-color: var(--blue);
     font-size: 25px;
     padding: 0px 50px;
     margin: 5px 0px;
 }
 
+/* Section names */
 h2 {
     display: inline-block;
     text-align: right;
     padding-right: 15px;
     font-size: 40px;
-    color: rgb(87, 87, 87);
+    color: var(--gray);
+}
+
+.aboutme h2 {
     margin-left: 100px;
 }
 
@@ -77,6 +85,73 @@ h2 {
 .aboutme p {
     padding: 0 70px 0 25px;
     font-size: 20px;
-    border-left: 3px solid rgb(61, 207, 207);
-    color: rgb(87, 87, 87);
+    border-left: 3px solid var(--blue);
+    color: var(--gray);
+}
+
+/* Work section */
+.work {
+    display: flex;
+    align-items: flex-start;
+}
+
+.work h2 {
+    margin-left: 116px;
+}
+
+.work-images {
+    padding-left: 30px;
+    border-left: 3px solid var(--blue);
+    opacity: 0.7;
+}
+
+.surf-report {
+    background-image: url(./images/surf\ report.jpg);
+    width: 1130px;
+    height: 450px;
+    background-size: cover;
+    border: 3px solid var(--blue);
+}
+
+.caption {
+    background-color: var(--blue);
+    position: absolute;
+    margin-top: 360px;
+}
+
+ h3 {
+    font-size: 25px;
+    margin: 8px;
+ }
+
+ .caption p {
+    margin: 8px;
+ }
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px -10px;
+    position: relative;
+    padding-left: 2px;
+}
+
+.image-grid img {
+    position: relative;
+    width: 556px;
+    height: 200px;
+    margin: 5px 7px;
+    border: 3px solid var(--blue);
+}
+
+.captions {
+    background-color: var(--blue);
+    position: absolute;
+    margin-top: -100px;
+    margin-left: 8px;
+
+}
+
+.captions p {
+    margin: 8px;
 }
