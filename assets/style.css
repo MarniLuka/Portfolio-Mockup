@@ -155,3 +155,28 @@ h2 {
 .captions p {
     margin: 8px;
 }
+
+/* Contact Me section */
+.contact-me {
+    display: flex;
+    align-items: flex-start;
+  }
+  .contact-me h2 {
+    margin-left: 66.5px;
+  }
+  .contact-me ul {
+    list-style-type: none;
+    display: flex;
+    padding: 30px;
+    border-left: 3px solid rgb(61, 207, 207);
+  }
+  
+  .contact-me li {
+    color: rgb(87, 87, 87);
+    font-size: 20px;
+    padding: 0 70px 20px 70px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 3px;
+    display: flex;
+  } 
