@@ -9,31 +9,28 @@
 
 /* Navbar */
 header {
-    background-color: rgba(0, 0, 0, 0.815);
+    background-color: rgba(0, 0, 0, 0.774);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
     background-color: var(--blue);
-    display: inline-block;
     padding-left: 60px;
     font-size: 50px;
 }
 
 header ul {
     list-style-type: none;
-    display: inline-block;
     display: flex;
-    padding: 30px;
-    float: right;
 }
 
 header li a {
     color: var(--blue);
     font-size: 20px;
-    padding: 5px;
-    display: inline-block;
+    padding: 10px;
     display: flex;
-    text-align: center;
     text-decoration: underline;
     text-underline-offset: 10px;
     text-decoration-thickness: 3px;
@@ -48,7 +45,7 @@ figure {
 .figure-image {
     width: 100%;
     height: 200px;
-    background-image: url(./images/geometric\ pattern.jpg);
+    background-image: url(./images/background.jpg);
     background-size: cover; 
     background-position: center;
 }
@@ -56,7 +53,7 @@ figure {
 .subtitle {
     position: absolute;
     bottom: 10px;
-    right: 240px;
+    right: 106px;
     background-color: var(--blue);
     font-size: 25px;
     padding: 0px 50px;
@@ -72,18 +69,19 @@ h2 {
     color: var(--gray);
 }
 
-.aboutme h2 {
-    margin-left: 100px;
-}
-
 /* About Me section */
 .aboutme {
     display: flex;
     align-items: flex-start;
 }
 
+.aboutme h2 {
+    margin-left: 100px;
+}
+
 .aboutme p {
-    padding: 0 70px 0 25px;
+    padding-left: 25px;
+    width: 80%;
     font-size: 20px;
     border-left: 3px solid var(--blue);
     color: var(--gray);
@@ -100,83 +98,114 @@ h2 {
 }
 
 .work-images {
-    padding-left: 30px;
+    padding-left: 25px;
     border-left: 3px solid var(--blue);
-    opacity: 0.7;
+    object-fit: cover;
 }
 
-.surf-report {
-    background-image: url(./images/surf\ report.jpg);
-    width: 1130px;
+/* Work big picture */
+.surf-report img {
+    position: relative;
+    width: 95%;
     height: 450px;
     background-size: cover;
     border: 3px solid var(--blue);
+    opacity: 0.7;
 }
 
-.caption {
-    background-color: var(--blue);
-    position: absolute;
-    margin-top: 360px;
-}
-
- h3 {
-    font-size: 25px;
-    margin: 8px;
- }
-
- .caption p {
-    margin: 8px;
- }
-
+/* Work image grid... tried my best :( */
 .grid {
     display: flex;
     flex-wrap: wrap;
-    margin: 10px -10px;
+    margin: 8px -8px;
     position: relative;
     padding-left: 2px;
 }
 
 .image-grid img {
     position: relative;
-    width: 556px;
+    width: 557px;
     height: 200px;
-    margin: 5px 7px;
+    margin: 7px;
+    background-size: cover;
     border: 3px solid var(--blue);
+    opacity: 0.7;
+    display: flex;
 }
 
-.captions {
+/* Work captions */
+h3 {
+    font-size: 25px;
+    margin: 8px;
+ }
+
+.caption {
     background-color: var(--blue);
     position: absolute;
-    margin-top: -100px;
-    margin-left: 8px;
-
+    margin-top: -90px;
 }
 
-.captions p {
+ .caption p {
     margin: 8px;
+ }
+
+ .captions {
+    background-color: var(--blue);
+    position: absolute;
+    margin-top: -108px;
+    margin-left: 8px;
+
 }
 
 /* Contact Me section */
 .contact-me {
     display: flex;
-    align-items: flex-start;
-  }
-  .contact-me h2 {
+}
+
+.contact-me h2 {
     margin-left: 66.5px;
-  }
-  .contact-me ul {
+}
+
+.contact-me ul {
     list-style-type: none;
     display: flex;
-    padding: 30px;
+    padding: 25px;
     border-left: 3px solid rgb(61, 207, 207);
-  }
+}
   
-  .contact-me li {
-    color: rgb(87, 87, 87);
+.contact-me li {
     font-size: 20px;
-    padding: 0 70px 20px 70px;
     text-decoration: underline;
     text-underline-offset: 10px;
     text-decoration-thickness: 3px;
     display: flex;
-  } 
+    align-items: center;
+    padding: 0 70px;
+} 
+
+.contact-me a {
+    color: rgb(87, 87, 87);
+}
+
+/* Special Effects */
+.surf-report img:hover {
+    opacity: 1;
+}
+
+.image-grid img:hover {
+    opacity: 1;
+}
+
+/* Had trouble figuring it out :( */
+@media screen and (max-width: 820px) {
+    header {
+        flex-direction: column;
+    }
+    .contact-me {
+        flex-direction: column;
+    }
+    .contact-me li {
+        padding: 0 20px;
+    }
+}
+
